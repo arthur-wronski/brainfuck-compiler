@@ -38,7 +38,7 @@ public class Parser {
         outerParser(tokenQueue);
 
         if (tokenQueue.poll() != Token.JUMP_LEFT){
-            throw new Exception("Error");
+            throw new Exception("Error: Missing loop closure ]");
         }
     }
 }
