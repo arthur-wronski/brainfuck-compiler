@@ -13,7 +13,7 @@ public class Parser {
             throw new Exception("Error: error whilst parsing");
         }
         else{
-            System.out.println("I cooked");
+            System.out.println("Parsing successful");
         }
     }
 
