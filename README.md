@@ -1,4 +1,4 @@
-** An interpreter for BrainFuck. **
+## An interpreter for BrainFuck.
 
 My second Java project after the WAR card game. Chose BrainFuck for the small instruction set and humorous value.
 
