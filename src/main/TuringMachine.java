@@ -8,7 +8,7 @@ public class TuringMachine {
 
     public TuringMachine(){
         // tape length should be 30,000
-        this.tape = new byte[1000];
+        this.tape = new byte[30000];
 
         // head starts at beginning of tape
         this.headPointer = 0;
