@@ -14,9 +14,7 @@ public class Parser {
         if (!tokenQueue.isEmpty()){
             throw new Exception("Error: found loop closure ] with no corresponding loop initiator [");
         }
-        else{
-            System.out.println("Parsing successful");
-        }
+//        System.out.println("Parsing successful");
     }
 
     void outerParser(Queue<Token> tokenQueue) throws Exception{
