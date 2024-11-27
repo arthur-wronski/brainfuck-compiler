@@ -56,5 +56,6 @@ public class TuringMachine {
 
         // typecast  character to ASCII value in byte
         tape[headPointer] = (byte) inputtedCharacter;
+        scanner.close();
     }
 }
