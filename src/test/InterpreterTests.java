@@ -56,6 +56,12 @@ public class InterpreterTests {
         interpreter.run(code);  // This should throw an exception
     }
 
+    @Test(expected = Exception.class)
+    public void testMoveHeadBeyondTape() throws Exception {
+        String code = "<";  // Moves left despite being at start of tape -> invalid
+        interpreter.run(code);  // This should throw an exception
+    }
+
     @Test
     public void testSimpleOutput() throws Exception {
         int targetValue = 65;
