@@ -13,7 +13,7 @@ public class Lexer {
         this.tokenQueue = new ArrayDeque<Token>();
         this.charToTokenMap = new HashMap<Character, Token>();
         charToTokenMap.put('>', Token.MOVE_RIGHT);
-        charToTokenMap.put('<', Token.MOVE_RIGHT);
+        charToTokenMap.put('<', Token.MOVE_LEFT);
         charToTokenMap.put('+', Token.INCREMENT);
         charToTokenMap.put('-', Token.DECREMENT);
         charToTokenMap.put('.', Token.OUTPUT_CHAR);
