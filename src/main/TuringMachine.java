@@ -20,10 +20,17 @@ public class TuringMachine {
 
     public void moveHeadRight(){
         headPointer += 1;
+        if (headPointer >= tape.length){
+            throw new ArrayIndexOutOfBoundsException("Error: head pointer tried to move right beyond end of tape");
+        }
     }
 
     public void moveHeadLeft(){
         headPointer -= 1;
+
+        if (headPointer < 0){
+            throw new ArrayIndexOutOfBoundsException("Error: head pointer tried to move left on index 0");
+        }
     }
 
     public void incrementByte(){
