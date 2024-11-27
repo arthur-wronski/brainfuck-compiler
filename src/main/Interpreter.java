@@ -19,6 +19,10 @@ public class Interpreter {
         this.loopIndexes = new HashMap<Integer, Integer>();
     }
 
+    public TuringMachine getTuringMachine() {
+        return turingMachine;
+    }
+
     private void setInstructionList(List<Token> instructionList){
         this.instructionList = instructionList;
     }
