@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Queue;
 
 // here's how you construct valid code in Brainfuck:

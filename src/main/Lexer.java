@@ -1,3 +1,5 @@
+package main;
+
 import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +22,7 @@ public class Lexer {
         charToTokenMap.put(']', Token.JUMP_LEFT);
     }
 
-    void tokenizeCode(String code){
+    public void tokenizeCode(String code){
         for (char character : code.toCharArray()){
             Token token = charToTokenMap.get(character);
 

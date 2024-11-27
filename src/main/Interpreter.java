@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Queue;
 
 public class Interpreter {
@@ -9,8 +11,12 @@ public class Interpreter {
 
     public void executeCode(Queue<Token> instructionQueue){
         while (!instructionQueue.isEmpty()){
-            executeInstruction(instructionQueue.poll());
+            Token instruction = instructionQueue.peek();
         }
+    }
+
+    private void executeLoop(Queue<Token> instructionQueue){
+
     }
 
     private void executeInstruction(Token instruction){
@@ -33,6 +39,12 @@ public class Interpreter {
             case Token.INPUT_CHAR:
                 turingMachine.storeInput();
                 break;
+            case Token.JUMP_RIGHT:
+                // if value at pointer is 0 -> move forward to instruction after corresponding ]
+                // otherwise nothing
+            case Token.JUMP_LEFT:
+                // if value at pointer is 0 -> move back to instruction after corresponding [
+                // otherwise nothing
         }
     }
 }

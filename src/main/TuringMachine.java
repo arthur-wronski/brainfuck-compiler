@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Scanner;
 
 public class TuringMachine {
@@ -10,6 +12,10 @@ public class TuringMachine {
 
         // head starts at beginning of tape
         this.headPointer = 0;
+    }
+
+    public byte getValueAtPointer(){
+        return tape[headPointer];
     }
 
     public void moveHeadRight(){
@@ -29,10 +35,8 @@ public class TuringMachine {
     }
 
     public void outputChar(){
-        byte valueRead = tape[headPointer];
-
         // casting byte to char to get ASCII representation
-        char characterToBePrinted = (char) valueRead;
+        char characterToBePrinted = (char) getValueAtPointer();
 
         System.out.print(characterToBePrinted);
     }
@@ -43,8 +47,7 @@ public class TuringMachine {
 
         char inputtedCharacter = scanner.next().charAt(0);
 
-        // convert character to ASCII value in byte form
-        byte valueToStore = (byte) inputtedCharacter;
-        tape[headPointer] = valueToStore;
+        // typecast  character to ASCII value in byte
+        tape[headPointer] = (byte) inputtedCharacter;
     }
 }
